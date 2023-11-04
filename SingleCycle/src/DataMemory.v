@@ -28,7 +28,7 @@ module DataMemory(
     output [31:0] Dout
 );
 
-    reg [31:0] data [0:2047];  // 32位×1024的存储器
+    reg [31:0] data [0:2047];  // 32位×2048的存储器
     integer i;
 
     initial begin
@@ -39,12 +39,10 @@ module DataMemory(
 
     always @(posedge clock) begin  
         if (Wmem) begin
-            // 在写入使能时，写入数据到指定地址
             data[address[12:2]] <= writeInput;
         end
     end
 
-    // 组合逻辑，读取指定地址的数据
     assign Dout = data[address[31:2]];
 
 endmodule

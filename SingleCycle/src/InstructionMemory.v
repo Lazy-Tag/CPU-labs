@@ -28,7 +28,6 @@ reg [31:0] memory [0:1023]; // 4 KiB memory with 1024 words
 
 initial begin
     $display("start simulation");
-    // Initialize memory with machine code from a file
     $readmemh("C:\\Users\\HBW\\Desktop\\SingleCycle\\code.txt", memory);
 end
 
