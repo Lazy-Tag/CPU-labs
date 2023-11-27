@@ -1,11 +1,11 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/11/23 22:27:19
+// Create Date: 2023/11/25 16:47:49
 // Design Name: 
-// Module Name: SaveOp2BE
+// Module Name: PCAdd4
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SaveOp2BE(
-
-    );
+module PCAdd4(PC, PCAdd4);
+    input [31:0] PC;
+    output [31:0] PCAdd4;
+    Adder adder(PC, 32'b100, PCAdd4);
 endmodule

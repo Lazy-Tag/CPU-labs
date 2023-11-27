@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/11/23 19:25:31
+// Create Date: 2023/11/25 16:47:49
 // Design Name: 
-// Module Name: IF_C_Jump
+// Module Name: shift
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,16 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module IF_C_Jump(
-    input [31:0] A,
-    input [31:0] B,
-    input [3:0] Op,
-    input usigned,
-    output C_Jump
-    );
+module Shifter32L2(X,Sh);
+    input [31:0] X;
+    output [31:0] Sh;
+    parameter z=2'b00;
+    assign Sh={X[29:0],z};
+endmodule
 
-    wire is_eq;
-    assign is_eq = (A == B);
-
-    assign C_Jump = (~Op[3] && ~Op[2] && ~Op[1]) && is_eq; 
+module ShifterCombination(X,PCADD4,Sh);
+    input [25:0] X;
+    input [31:0] PCADD4;
+    output [31:0] Sh;
+    parameter z=2'b00;
+    assign Sh={PCADD4[31:28],X[25:0],z};
 endmodule
