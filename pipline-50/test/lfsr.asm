@@ -42,7 +42,7 @@ $LVL6:
 $L9:
 $LBE6:
         jr      $31
-        nop
+        sll $0, $0, 0
 
 $LFB3:
 main:

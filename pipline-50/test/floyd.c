@@ -35,7 +35,7 @@ int main()
             G[i][j] = (tmp & 0xFFFF) / 100 * (i - j) * (i - j);
         }
 
-    asm("nop\n\t");
+    asm("sll $0, $0, 0\n\t");
 
     for (int i = 0; i < MX; i++)
         for (int j = 0; j < MX; j++)

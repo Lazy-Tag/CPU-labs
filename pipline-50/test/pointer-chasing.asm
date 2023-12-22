@@ -47,7 +47,7 @@ $LVL6:
 
 $LBE10:
         jr      $31
-        nop
+        sll $0, $0, 0
 
 $LFB3:
 main:
@@ -84,7 +84,7 @@ $LVL12:
 $LBE14:
 $LBE12:
 $LBE11:
-        nop
+        sll $0, $0, 0
 
 $LVL13:
         move    $3,$0

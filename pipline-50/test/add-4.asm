@@ -89,6 +89,7 @@ $LBB8:
         syscall
 
         jal _Z6__exitv
+        sll $0, $0, 0
 
 $LVL19:
 $LBE8:

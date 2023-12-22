@@ -1,6 +1,6 @@
         ori     $sp, $zero, 4096
         j       main
-        nop
+        sll $0, $0, 0
 
 _Z8printinti:                           # @_Z8printinti
         addiu   $sp, $sp, -8
@@ -233,7 +233,7 @@ main:                                   # @main
         sw      $zero, 356($3)
         sw      $zero, 352($3)
 
-        nop
+        sll $0, $0, 0
 
         addiu   $5, $zero, 0
         addiu   $6, $zero, 400
@@ -262,7 +262,7 @@ $BB2_2:                                 # =>This Loop Header: Depth=1
 $BB2_3:                                 #   in Loop: Header=BB2_4 Depth=2
         addiu   $gp, $gp, 40
         beq     $gp, $6, $BB2_1
-        nop
+        sll $0, $0, 0
 $BB2_4:                                 #   Parent Loop BB2_2 Depth=1
         addu    $16, $7, $gp
         lw      $17, 0($16)
@@ -282,7 +282,7 @@ $BB2_6:                                 #   in Loop: Header=BB2_4 Depth=2
         lw      $1, 4($19)
         slt     $1, $20, $1
         beqz    $1, $BB2_8
-        nop
+        sll $0, $0, 0
         sw      $20, -16($18)
         lw      $17, 0($16)
 $BB2_8:                                 #   in Loop: Header=BB2_4 Depth=2
@@ -302,7 +302,7 @@ $BB2_10:                                #   in Loop: Header=BB2_4 Depth=2
         lw      $1, 12($19)
         slt     $1, $20, $1
         beqz    $1, $BB2_12
-        nop
+        sll $0, $0, 0
         sw      $20, -8($18)
         lw      $17, 0($16)
 $BB2_12:                                #   in Loop: Header=BB2_4 Depth=2
@@ -322,7 +322,7 @@ $BB2_14:                                #   in Loop: Header=BB2_4 Depth=2
         lw      $1, 20($19)
         slt     $1, $20, $1
         beqz    $1, $BB2_16
-        nop
+        sll $0, $0, 0
         sw      $20, 0($18)
         lw      $17, 0($16)
 $BB2_16:                                #   in Loop: Header=BB2_4 Depth=2
@@ -342,7 +342,7 @@ $BB2_18:                                #   in Loop: Header=BB2_4 Depth=2
         lw      $1, 28($19)
         slt     $1, $20, $1
         beqz    $1, $BB2_20
-        nop
+        sll $0, $0, 0
         sw      $20, 8($18)
         lw      $17, 0($16)
 $BB2_20:                                #   in Loop: Header=BB2_4 Depth=2
@@ -362,7 +362,7 @@ $BB2_22:                                #   in Loop: Header=BB2_4 Depth=2
         lw      $1, 36($19)
         slt     $1, $16, $1
         beqz    $1, $BB2_3
-        nop
+        sll $0, $0, 0
         j       $BB2_3
         sw      $16, 16($18)
 $BB2_24:

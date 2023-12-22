@@ -31,4 +31,5 @@ int main(void)
         t += i;
 
     printint(t);
+    __exit();
 }

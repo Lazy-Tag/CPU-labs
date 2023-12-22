@@ -1,7 +1,7 @@
 为了方便测试，你可以在 testbench 内加入周期数输出指令。
 
 注意：
-pointer-chasing 与 floyd 两个测试项目有初始化过程，初始化完成后会执行一条 nop 指令。
+pointer-chasing 与 floyd 两个测试项目有初始化过程，初始化完成后会执行一条 sll $0, $0, 0 指令。
 你可以根据你的输出来判断何时初始化完成。
 
 为了检查正确性，你应当正确实现 syscall，或者在第一次 syscall 后检查 $a0 的值

@@ -38,7 +38,7 @@ $LVL5:
         addiu   $2,$2,1
 $LVL6:
         bne     $2,$4,$L6
-        nop
+        sll $0, $0, 0
 $LVL7:
 $L5:
 $LBE6:
@@ -50,6 +50,7 @@ $LBB8:
         syscall
 
         jal _Z6__exitv
+        sll $0, $0, 0
 
 $LVL8:
 $LBE8:

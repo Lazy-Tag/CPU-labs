@@ -37,7 +37,7 @@ int main(void)
 {
     initialize();
 
-    asm("nop\n\t");
+    asm("sll $0, $0, 0\n\t");
 
     int now = 0;
 

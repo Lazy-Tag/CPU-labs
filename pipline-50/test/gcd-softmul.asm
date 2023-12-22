@@ -1,6 +1,6 @@
         ori     $sp, $zero, 4096
         j       main
-        nop
+        sll $0, $0, 0
 
 _Z8printinti:                           # @_Z8printinti
         addiu   $sp, $sp, -8
@@ -68,12 +68,12 @@ $BB3_1:                                 # =>This Loop Header: Depth=1
         bnez    $1, $BB3_1
         move    $4, $2
         beqz    $2, $BB3_5
-        nop
+        sll $0, $0, 0
 $BB3_3:                                 #   Parent Loop BB3_1 Depth=1
         subu    $5, $5, $2
         sltu    $1, $5, $2
         beqz    $1, $BB3_3
-        nop
+        sll $0, $0, 0
         j       $BB3_1
         move    $4, $2
 $BB3_5:

@@ -1,6 +1,6 @@
         ori     $sp, $zero, 4096
         j       main
-        nop
+        sll $0, $0, 0
 
 _Z8printinti:                           # @_Z8printinti
         addiu   $sp, $sp, -8
@@ -44,8 +44,10 @@ $BB2_1:                                 # =>This Inner Loop Header: Depth=1
         bnez    $1, $BB2_1
         move    $4, $2
         beqz    $2, $BB2_4
-        nop
-        divu    $zero, $5, $2
+        sll $0, $0, 0
+        # divu    $zero, $5, $2
+        divu    $5, $2
+        mflo    $0
         # teq     $2, $zero, 7
         move    $4, $2
         j       $BB2_1
